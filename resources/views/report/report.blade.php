@@ -34,7 +34,7 @@
     
     <div class="max-w-4xl mx-auto px-6 py-8">
 
-        <div class="mt-6 p-4 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 rounded-lg">
+        <div class="mt-6 p-4 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 rounded-lg text-[15px]">
             <label class="block mb-2 font-medium text-gray-700">Dica</label>
 
             <p>Preencha todas as informações com o máximo de detalhes para aumentar as chances de encontrar seu item perdido.</p>
@@ -143,7 +143,7 @@
                 >
 
                 <label class="block mb-2 font-medium text-gray-700">
-                    Telefone (opcional)
+                    Telefone
                 </label>
                 <input 
                     type="tel" 
