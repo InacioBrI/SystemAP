@@ -19,7 +19,7 @@
                     d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
             </svg>
             
-            <h1 class="text-[20px]  text-gray-800 select-none font-normal">
+            <h1 class="text-[18px]  text-gray-800 select-none font-normal hover:text-gray-600 cursor-pointer">
                 Voltar
             </h1>
         </a>
@@ -49,7 +49,7 @@
                     placeholder="Seu email"
                 >
             </div>
-            <div class="mb-6">
+            <div class="mb-4">
                 <label class="block mb-2 font-medium text-gray-700">Senha</label>
                 <input 
                     type="password" 
@@ -58,6 +58,11 @@
                     placeholder="Sua senha"
                 >
             </div>
+
+            <div class="flex mb-4 text-left justify-between hover:underline ">
+                <a href="" class="text-sm text-[#00238d]">Esqueci a senha</a>
+            </div>
+
             <button type="submit" class="w-full bg-black text-white p-3 rounded-xl hover:bg-[#00238d] transition duration-300">
                 Entrar
             </button>

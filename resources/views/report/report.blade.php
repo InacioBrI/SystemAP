@@ -45,7 +45,7 @@
             
             <div class="mb-6">
 
-                <h1 class="mb-4 text-lg font-semibold">
+                <h1 class="m-4 text-lg font-semibold">
                     Informações do Item Perdido
                 </h1>
 
