@@ -10,19 +10,22 @@
 
     <div class="flex items-center space-x-6">
 
-        {{-- Ícone de Configurações (Login ou Config) --}}
         @auth
-            <a href="{{ route('account.settings') }}">
-                <x-heroicon-o-cog class="w-7 h-7 text-[#ffffff]" />
-            </a>
+            <form action="{{ route('logout') }}" method="POST" class="inline">
+                @csrf
+                <button type="submit" class="p-2 rounded-full hover:bg-blue-800/10 border border-[#ffffff] transition-all duration-300 cursor-pointer" title="Sair">
+                    <svg class="w-7 h-7 text-[#ffffff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+                    </svg>
+                </button>
+            </form>
         @endauth
 
         @guest
-            <a href="{{ route('login') }}" class="p-2 rounded-full hover:bg-blue-800/10 border border-[#ffffff] transition-all duration-300">
+            <a href="{{ route('login') }}" class="p-2 rounded-full hover:bg-blue-800/10 border border-[#ffffff] transition-all duration-300 cursor-pointer" title="Login">
                 <x-heroicon-s-user class="w-6 h-6 text-[#ffffff]"/>
             </a>
         @endguest
 
     </div>
 </header>
-

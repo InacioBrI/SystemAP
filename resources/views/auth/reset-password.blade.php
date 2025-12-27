@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redefinir Senha | Área Administrativa</title>
+    <title>Nova Senha | Área Administrativa</title>
     @vite('resources/css/app.css')
 </head>
 <body class="bg-gray-100">
@@ -35,7 +35,7 @@
         <div class="text-center mb-6">
             <h1 class="text-xl font-semibold">Redefinir senha</h1>
             <p class="text-gray-600 text-sm">
-                Informe seu email para receber o link de redefinição
+                Crie uma nova senha para sua conta
             </p>
         </div>
 
@@ -51,22 +51,34 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('password.email') }}" class="w-full">
+        <form method="POST" action="{{ route('password.update') }}" class="w-full">
             @csrf
+            <input type="hidden" name="token" value="{{ $token }}">
+            <input type="hidden" name="email" value="{{ $email }}">
 
             <div class="mb-4">
-                <label class="block mb-2 text-gray-700">Email</label>
+                <label class="block mb-2 text-gray-700">Nova Senha</label>
                 <input
-                    type="email"
-                    name="email"
+                    type="password"
+                    name="password"
                     required
                     class="w-full border border-gray-300 p-3 rounded-xl"
-                    placeholder="Seu email">
+                    placeholder="Digite sua nova senha">
+            </div>
+
+            <div class="mb-4">
+                <label class="block mb-2 text-gray-700">Confirmar Nova Senha</label>
+                <input
+                    type="password"
+                    name="password_confirmation"
+                    required
+                    class="w-full border border-gray-300 p-3 rounded-xl"
+                    placeholder="Confirme sua nova senha">
             </div>
 
             <button type="submit"
                 class="w-full bg-black text-white p-3 rounded-xl hover:bg-[#00238d] transition">
-                Enviar link de redefinição
+                Redefinir senha
             </button>
         </form>
     </div>

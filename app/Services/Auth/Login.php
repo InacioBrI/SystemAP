@@ -31,7 +31,7 @@ class Login
 
         // Redirecionamento por papel
         if ($user->role === 'admin') {
-            return redirect()->route('admin.dashboard');
+            return redirect()->route('admin.panel');
         }
 
         return redirect()->route('report');

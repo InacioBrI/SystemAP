@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Services\Admin\Admin;
-use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
@@ -12,22 +11,13 @@ class AdminController extends Controller
 
     public function __construct(Admin $admin)
     {
-        $this->middleware(['auth', 'admin']);
+
+        $this->middleware('auth');
         $this->admin = $admin;
     }
 
-    public function dashboard()
+    public function index()
     {
         return $this->admin->dashboard();
-    }
-
-    public function createUser()
-    {
-        return $this->admin->createUser();
-    }
-
-    public function storeUser(Request $request)
-    {
-        return $this->admin->storeUser($request);
     }
 }

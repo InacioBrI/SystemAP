@@ -34,6 +34,16 @@ class AuthController extends Controller
         return $this->forgotPassword->send($request);
     }
 
+    public function showReset($token)
+    {
+        return $this->forgotPassword->showReset($token);
+    }
+
+    public function reset(Request $request)
+    {
+        return $this->forgotPassword->reset($request);
+    }
+
     public function logout(Request $request)
     {
         return $this->login->logout($request);
